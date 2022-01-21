@@ -3,9 +3,9 @@ items:
 #  title: Home
 #- page_id: about/index
 # title: About
-- url: https://docs.ibat.cemosis.fr
+- url: https://docs.feelpp.fr
   title: Docs
-- url: https://twitter.com/cemosis
+- url: https://twitter.com/feelpp
   title: <span class="icon"><i class="fa fa-lg fa-twitter"></i></span>
-- url: https://cases.ibat.cemosis.fr
+- url: https://www.cemosis.fr
   title: <span class="icon"><i class="fa fa-lg fa-briefcase"></i></span>

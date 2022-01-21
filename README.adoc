@@ -7,7 +7,7 @@ ifdef::env-gitlab[:badges:]
 :uri-netlify: https://www.netlify.com
 :uri-node: https://nodejs.org
 :uri-cemosis: https://cemosis.fr
-:uri-project: https://ibat.cemosis.fr
+:uri-project: https://www.feelpp.org
 :uri-ruby: https://www.ruby-lang.org
 
 ifdef::badges[]

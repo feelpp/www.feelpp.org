@@ -1,6 +1,6 @@
-title: IBat
-baseurl: https://ibat.cemosis.fr
+title: Feel++
+baseurl: https://www.feelpp.org 
 description: 
-keywords: building, energy, modeling, simulation, comfort
+keywords: feelpp, multiphysics
 author: Cemosis
 copyright: Cemosis (c) {year}

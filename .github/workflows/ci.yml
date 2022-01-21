@@ -7,7 +7,7 @@ jobs:
   activate:
     runs-on: self-ubuntu-20.04
     if: |
-      github.repository == 'feelpp/ibat.cemosis.fr' &&
+      github.repository == 'feelpp/www.feelpp.org' &&
       !startsWith(github.event.head_commit.message, 'Release ') &&
       !contains(github.event.head_commit.message, 'ci skip')
     steps:
@@ -85,7 +85,7 @@ jobs:
       uses: docker/build-push-action@v2
       with: 
         context: .
-        repository: feelpp/ibat.cemosis.fr
-        tags: ghcr.io/feelpp/ibat.cemosis.fr/www:latest
+        repository: feelpp/www.feelpp.org
+        tags: ghcr.io/feelpp/www.feelpp.org/www:latest
         file: Dockerfile
         push: true
