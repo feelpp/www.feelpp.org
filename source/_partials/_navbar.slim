@@ -1,0 +1,15 @@
+nav.navbar class=(locals[:color] ? %(is-#{color}) : nil) role='navigation' aria-label='main navigation'
+  .container
+    .navbar-brand
+      = link_to 'IBat', '/', class: 'navbar-item'
+      .navbar-burger.burger data-target='topbar-nav'
+        - 3.times do
+          span
+    #topbar-nav.navbar-end.navbar-menu
+      - data.navbar.items.each do |item|
+        - if (item_page_id = item.page_id)
+          - item_is_active = item_page_id == (current_page_id = current_page.page_id)
+          = link_to item.title, item_page_id, class: (['navbar-item', (item_is_active ? 'is-active' : nil)].compact.join ' ')
+        - else
+          / Q: should we wrap these in span.navbar-item?
+          = link_to item.title, item.url, class: 'navbar-item external'

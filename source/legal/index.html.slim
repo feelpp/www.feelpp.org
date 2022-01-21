@@ -1,0 +1,16 @@
+---
+title: Legal
+---
+header.header role='banner'
+  = partial '/_partials/navbar', locals: { color: 'dark' }
+section.hero.is-white
+  .hero-body
+    .container
+      h1.title.has-text-centered Legal
+section.section
+  .container
+    .columns
+      .column
+        h3.title.has-text-centered = link_to 'Terms of Use', 'legal/terms-of-use'
+      .column
+        h3.title.has-text-centered = link_to 'Privacy Policy', 'legal/privacy-policy'

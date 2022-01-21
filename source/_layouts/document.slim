@@ -1,0 +1,14 @@
+= wrap_layout :layout do
+  header.header role='banner'
+    = partial '/_partials/navbar', locals: { color: 'dark' }
+  main role='main'
+    section.section.is-small
+      .columns.is-centered
+        article.document.column
+          - if (return_to = current_page.data.return)
+            aside.nav: p.return = link_to %(Back to #{return_to.content}), return_to.id
+          h1 = current_page.data.title
+          - if (updated = current_page.data.date)
+            .paragraph.last-updated: p Updated: #{format_date updated}
+          .body
+            = yield

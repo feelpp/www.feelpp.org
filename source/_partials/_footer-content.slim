@@ -1,0 +1,59 @@
+footer.footer
+  .container.copy
+    .columns
+      .column
+        h3.is-size-3 IBat
+        p A platform for building energy modeling and simulation that enables computing energy consumption and losses in buildings including comfort estimations. IBat is built on a large set of Open Source Software (OSS) 
+        p.has-text-grey.is-small
+          |&#169; #{Time.now.year} Cemosis.
+        p.has-text-grey.is-small
+          => link_to 'Terms of Use', 'legal/terms-of-use'
+          '-
+          => link_to 'Privacy', 'legal/privacy-policy'
+          '-
+          = link_to 'Legal', 'legal/index'
+      .column.oss
+        h4 Cemosis OSS
+        / NOTE level-item has margin problems, so don't use
+        .box
+          .level.is-mobile
+            .level-left : p.title.is-size-5 : a href='https://github.com/feelpp/feelpp' Feel++
+            .level-right : a href='https://github.com/feelpp/feelpp' : i.fa.fa-github
+          p A finite element library embedded in C++ providing a wide range of methodologies and a HPC environment.
+        .box
+          .level.is-mobile
+            .level-left : p.title.is-size-5 : a href='https://docs.feelpp.org/toolboxes/0.109/index.html' Feel++ Toolboxes
+            .level-right : a href='https://docs.feelpp.org/toolboxes/0.109/index.html' : i.fa.fa-www
+          p Feel++ Toolboxes for mono and multi-physics: Coefficient form PDEs, CSM, CFD, Heat-Fluid, Electro-Thermic.
+      .column.oss
+        h4 Ifc OSS
+        / NOTE level-item has margin problems, so don't use
+        .box
+          .level.is-mobile
+            .level-left : p.title.is-size-5 : a href='http://ifcopenshell.org' IfcOpenShell
+
+            .level-right : a href='https://github.com/IfcOpenShell/IfcOpenShell' : i.fa.fa-github
+          p IfcOpenShell is an open source (LGPL) software library that helps users and software developers to work with the IFC file format. 
+        .box
+          .level.is-mobile
+            .level-left : p.title.is-size-5 : a href='https://ifcquery.com/' Ifc++
+            .level-right : a href='https://github.com/ifcquery/ifcplusplus' : i.fa.fa-github
+          p IfcPlusPlus is an open source C++ class model, as well as a reader and writer for IFC files in STEP format. 
+      .column.oss
+        h4 UI OSS
+        / NOTE level-item has margin problems, so don't use
+        .box
+          .level.is-mobile
+            .level-left : p.title.is-size-5 : a href='https://www.qt.io/' Qt
+
+            .level-right : a href='https://github.com/qt' : i.fa.fa-github
+          p A cross-platform application framework
+        h4 Doc OSS
+        / NOTE level-item has margin problems, so don't use
+        .box
+          .level.is-mobile
+            .level-left : p.title.is-size-5 : a href='https://antora.org/' Antora
+
+            .level-right : a href='https://gitlab.com/antora/antora' : i.fa.fa-gitlab
+          p The multi-repository documentation site generator for tech writers who  writing in AsciiDoc.
+

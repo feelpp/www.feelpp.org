@@ -1,0 +1,89 @@
+article {
+  @if $prose-color != $body-color {
+    color: $prose-color;
+  }
+  @if $prose-family != $body-family {
+    font-family: $prose-family;
+  }
+  font-size: 1.25rem;
+  &.column {
+    flex: 0 0 auto;
+    max-width: 700px;
+  }
+
+  #preamble + .sect1,
+  .sect1 + .sect1 {
+    margin-top: 2.75rem;
+  }
+
+  .sect1 > h2:first-child {
+    margin-bottom: -0.625rem;
+  }
+
+  .sect2 {
+    margin-top: 2.25rem;
+    > h3:first-child {
+      margin-bottom: -0.625rem;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.15;
+    > a.anchor {
+      display: inline-block;
+      visibility: hidden;
+      font-family: FontAwesome;
+      font-weight: $weight-normal;
+      transform: scale(0.75);
+      width: 0;
+      position: absolute;
+      margin-left: -1.5ex;
+      &::before {
+        content: "\f0c1";
+        padding: 0 0.5ex;
+      }
+    }
+    &:hover > a.anchor {
+      visibility: visible;
+    }
+  }
+
+  h1 {
+    font-size: 2.375rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.375rem;
+  }
+
+  p {
+    line-height: 1.65;
+  }
+
+  .paragraph p {
+    margin: 0;
+  }
+
+  .paragraph,
+  .ulist {
+    margin-top: 1.75rem;
+  }
+
+  ul {
+    margin-left: 1.5em;
+    list-style: disc;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 0.6667em;
+  }
+}

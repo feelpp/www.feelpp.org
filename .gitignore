@@ -1,0 +1,6 @@
+/.bundle/
+/attic/
+/public/
+/node_modules/
+/Gemfile.lock
+/.ruby-*

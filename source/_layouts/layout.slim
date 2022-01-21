@@ -1,0 +1,43 @@
+- page_title = current_page.data.title
+- site_title = data.site.title
+- page_desc = current_page.data.description || data.site.description
+- page_author = data.site.author
+- page_keywords = current_page.data.keywords || data.site.keywords
+- page_image = to_absolute_uri (asset_url 'img/site-image.png')
+doctype 5
+html lang='en'
+  head
+    meta charset='utf-8'
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
+    title
+      - if page_title && page_title != site_title && page_title != 'Home'
+        = %(#{page_title} - #{site_title})
+      - else
+        = site_title
+    = (stylesheet_link_tag :site).sub(' type="text/css"', '').sub(' />', '>')
+    - if page_desc
+      meta name='description' content=page_desc
+    - if page_author
+      meta name='author' content=page_author
+    - if page_keywords
+      meta name='keywords' content=page_keywords
+    - if (page_copyright = data.site.copyright)
+      meta name='copyright' content=page_copyright
+    meta name='og:site_name' content=data.site.title
+    meta name='og:type' content='website'
+    meta name='og:title' content=(page_title || site_title)
+    meta name='og:url' content=(to_absolute_uri current_page.url)
+    - if page_image
+      meta name='og:image' content=page_image
+    - if page_desc
+      meta name='og:description' content=page_desc
+    - if page_image
+      meta name='twitter:card' content='summary'
+      meta name='twitter:image' content=page_image
+    - else
+      meta name='twitter:card' content='summary'
+    meta name='twitter:site' content=data.site.twitter
+    link rel='icon' href=(asset_url 'favicon.ico') type='image/x-icon'
+  body class=(current_page.page_id == 'index' ? 'home-page' : (current_page.page_id.tr '/', '-') + '-page')
+    = yield
+    = partial '_partials/footer'

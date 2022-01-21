@@ -1,0 +1,147 @@
+section.hero.is-primary.is-bold.is-fullheight
+  header.header.hero-head role='banner'
+    = partial '/_partials/navbar', locals: { color: 'transparent' }
+  .hero-body
+    .container style='margin-top: 1.5rem'
+      h1.title IBat
+      p.subtitle The platform for building energy modeling and simulation
+  .hero-footer
+    .container.has-text-centered style='margin-bottom: 3rem'
+      h3.subtitle.is-size-5 style='margin-bottom: 1.25rem' IBat 0.1 is now available!
+      p
+        a.button.is-white.is-outlined style='margin-right: 0.75rem' href='https://ibat.docs.cemosis.fr/'
+          span Install IBat Application
+        a.button.is-white.is-outlined style='margin-right: 0.75rem' href='https://ibat.cemosis.fr/wui/'
+          span Start IBat Web Application
+        a.button.is-white.is-outlined href='https://cases.ibat.cemosis.fr/'
+          span.icon: i.fa.fa-briefcase
+          span View the Study Cases
+section#feature.section.is-alternate
+  .container
+    .columns.is-desktop
+      .column
+        h3.title Online services for Building Energy Modeling
+    .columns.is-desktop
+      .columns.is-multiline
+        .column.is-11.is-offset-1
+          h3.subtitle CAD to BEM
+          p.desc ibat can automatically generate Building Energy Models (BEM) from 3D Computer-Aided Design (CAD) geometry.
+          p.desc Features: 
+          p.desc - Writing missing data to an ifc file.
+          p.desc - Automatic generation of multizone models from ifc file.
+          p.desc - Automatic generation 3D models from ifc file.
+        .column.is-11.is-offset-1
+          h3.subtitle Simulation 
+          p.desc ibat service offers the possibility to simulate large building models thanks to substantiel computation resources and advanced high performance calculation methods. ibat integrates data assimilation methods that allow to adjust the physical models in order to better approximate the real behaviour of the building.
+          p.desc Features: 
+          p.desc - Parallel computing.
+          p.desc - Model order reduction methods with data assimilation.
+          p.desc - 3D and multizone model coupling (upcoming).
+      .column.is-vcentered.is-half
+        figure.image: img src=(asset_url 'architect_in_building.jpeg', 'img')
+    .columns.is-desktop
+      .column.is-vcentered.is-half
+        figure.image: img src=(asset_url 'woman_building.jpeg', 'img')
+      .columns.is-multiline style='padding-top: 1rem'
+        .column.is-11.is-offset-1
+          h3.subtitle Data processing
+          p.desc ibat provides several tools to collect data from monitored buildings and processes it in order to make ready for use at any time.
+          p.desc Features: 
+          p.desc - Collect data from monitorred buldings. 
+          p.desc - Store collected data into database. 
+          p.desc - Monitor and diagnos a database. 
+          p.desc - Impute missing data. 
+          p.desc - Query database. 
+        .column.is-11.is-offset-1
+          h3.subtitle Result and analysis  
+          p.desc With ibat service, the simulation results are displayed in a pleasant and easy way of reading. They are presented in the form of charts and tables that include an analysis of the energy efficiency and the thermal comfort of the building. Ibat service also integrates analysis tools that can be useful in understanding, validating and calibrating the model.
+          p.desc Features: 
+          p.desc - Sensitivity analysis.
+          p.desc - Uncertainty analysis (upcoming).
+          p.desc - Energy efficiency and thermal comfort analysis. 
+
+
+section#feature.section.is-alternate
+  .container
+    / .columns.is-desktop
+    /   .column
+    /     h3.title User interface
+    .columns.is-desktop
+      .column.is-vcentered.is-half
+        figure.image: img src=(asset_url 'taras-shypka-iFSvn82XfGo-unsplash.jpeg', 'img')
+      .columns.is-vcentered.is-multiline style='padding-top: 1rem'
+        .column.is-11.is-offset-1
+          h3.subtitle User interface 
+          p.desc ibat service provides a user friendly interface that can be accessed online or downloaded for a local installation. In both cases, it has the same features and gives access to the same computing resources. 
+          p.desc Features
+          p.desc - Upload, view and potentially edit a CAD model (in ifc format).
+          p.desc - Configure the BEM 
+          p.desc - Setup and run a simulation 
+          p.desc - View the energy efficiency and thermal comfort analysis results.
+          p.desc - Download the simulation results.
+        .column.is-11.is-offset-1 style='margin-top: 1rem'
+          p
+            a.button.is-white.is-outlined style='margin-right: 0.75rem' href='https://ibat.docs.cemosis.fr/'
+              span Native interface
+            a.button.is-white.is-outlined style='margin-right: 0.75rem' href='https://ibat.cemosis.fr/wui/'
+              span Web interface
+              span.icon: i.fa.fa-briefcase
+    / .columns.is-desktop
+    /   .column.is-offset-1
+    /     h3.subtitle Feature 7
+    /     p.desc explanation Feature 7
+    /   .column
+    /     h3.subtitle Feature 8
+    /     p.desc explanation feature 8
+    / .columns.is-desktop
+    /   .column.is-offset-1
+    /     h3.subtitle feature 9
+    /     p.desc explanation feature 9
+
+section#feature.section
+  .container
+    .columns.is-vcentered.is-desktop
+      .column
+        h3.title Various analysis
+    .columns.is-vcentered.is-desktop
+      .column.is-offset-1
+        p.desc 
+        ul.columns.is-multiline
+          li.column.is-half.tick Consumption, Energy Loss
+          li.column.is-half.tick Comfort simulation
+          li.column.is-half.tick Global Sensitivity Analysis 
+          li.column.is-half.tick MultiZone Simulation 
+          li.column.is-half.tick 3D Simulation 
+    .columns.is-desktop
+      .column.is-offset-1
+        h3.subtitle Data formats
+        p.desc IFC as input file 
+        p.desc Results provided in CSV and JSON formats 
+      .column
+/        h3.subtitle yet another feature
+/        p.desc yet another explantion
+/    .columns.is-desktop
+/      .column.is-offset-1
+/        h3.subtitle 
+/        p.desc IFC as input file 
+/        p.desc Results provided in CSV and JSON formats 
+/      .column
+/        h3.subtitle Other feature
+/        p.desc other explanations
+/    .columns.is-vcentered.is-desktop
+/      .column.is-offset-1
+/        h3.subtitle Final feature
+/        p.desc final explanation
+/
+ / section#feature.section
+ /  .container
+ /    .columns.is-desktop
+ /      .column
+ /        h3.title GUI and Web User Interface
+ /    .columns.is-desktop
+ /      .column.is-offset-1
+ /        h3.subtitle Feature 1
+ /        p.desc explanations
+ /      .column
+ /        h3.subtitle Feature 2
+ /        p.desc explanations

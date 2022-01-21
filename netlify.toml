@@ -1,0 +1,18 @@
+[build]
+command = "bundle exec rake deploy:netlify"
+publish = "public"
+
+[build.environment]
+NODE_VERSION = "10"
+RUBY_VERSION = "2.6.2"
+
+[[headers]]
+for = "/vendor/font-awesome/fonts/*"
+  [headers.values]
+  Cache-Control = "public,max-age=604800"
+
+[[redirects]]
+from = "https://antora.netlify.com/*"
+to = "https://antora.org/:splat"
+status = 301
+force = true

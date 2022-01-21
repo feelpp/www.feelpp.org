@@ -1,0 +1,25 @@
+.hero.is-small {
+  h1.title {
+    //font-weight: $weight-light;
+    //font-weight: $weight-normal;
+    font-weight: $weight-semibold;
+    margin-bottom: 0.5rem;
+  }
+
+  p.subtitle {
+    color: rgba($primary-invert, 0.7);
+    font-weight: $weight-light;
+  }
+}
+
+.oss .box {
+  .fa {
+    font-size: 1.375rem;
+    width: 1.375rem;
+    text-align: center;
+  }
+
+  .level {
+    margin-bottom: 1rem;
+  }
+}

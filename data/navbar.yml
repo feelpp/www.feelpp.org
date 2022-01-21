@@ -1,0 +1,11 @@
+items:
+#- page_id: index
+#  title: Home
+#- page_id: about/index
+# title: About
+- url: https://docs.ibat.cemosis.fr
+  title: Docs
+- url: https://twitter.com/cemosis
+  title: <span class="icon"><i class="fa fa-lg fa-twitter"></i></span>
+- url: https://cases.ibat.cemosis.fr
+  title: <span class="icon"><i class="fa fa-lg fa-briefcase"></i></span>

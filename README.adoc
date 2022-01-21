@@ -1,0 +1,60 @@
+= IBat Project Site
+// Settings:
+:hide-uri-scheme:
+ifdef::env-gitlab[:badges:]
+// URIs:
+:uri-letsencrypt: https://letsencrypt.org
+:uri-netlify: https://www.netlify.com
+:uri-node: https://nodejs.org
+:uri-cemosis: https://cemosis.fr
+:uri-project: https://ibat.cemosis.fr
+:uri-ruby: https://www.ruby-lang.org
+
+ifdef::badges[]
+
+endif::[]
+
+This repository contains the source materials for the Antora project site published at {uri-project}.
+
+== Quickstart
+
+First, make sure you are using the right version of {uri-ruby}[Ruby] and {uri-node}[Node].
+
+ $ rvm use 2.6
+   nvm use 10
+
+Then, install the required dependencies:
+
+ $ bundle --path=.bundle/gems
+   npm i
+
+Finally, run the following command to preview the site:
+
+ $ bundle exec middleman
+
+You can then view the site at the URL \http://localhost:4567.
+
+== Hosting
+
+This site is hosted on {uri-github}[Github].
+It is managed by the account info [at] this domain.
+
+Deployment is triggered via a github action on the main branch of the git repository.
+
+
+The version of Ruby and Node is set using environment variables RUBY_VERSION and NODE_VERSION, respectively.
+
+=== DNS
+
+There are two DNS records that point ibat.cemosis.fr and www.ibat.cemosis.fr :
+
+ @ 3600 IN A 195.154.31.223
+ www 3600 IN CNAME s2.feelpp.org.
+
+
+== TLS Certificate (https)
+
+
+== Copyright and License
+
+Copyright (C) 2021-present {uri-cemosis}[Cemosis.]

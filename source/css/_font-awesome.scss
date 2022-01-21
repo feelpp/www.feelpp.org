@@ -1,0 +1,18 @@
+$fa-font-path: "../vendor/font-awesome/fonts";
+@import 'font-awesome/scss/variables';
+/*! Font Awesome v#{$fa-version} by @davegandy | Font: SIL OFL 1.1, CSS: MIT License | fontawesome.io */
+@import 'font-awesome/scss/mixins';
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('#{$fa-font-path}/fontawesome-webfont.woff2?v=#{$fa-version}') format('woff2'),
+    url('#{$fa-font-path}/fontawesome-webfont.woff?v=#{$fa-version}') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@import 'font-awesome/scss/core';
+@import 'font-awesome/scss/larger';
+//@import 'font-awesome/scss/fixed-width';
+.#{$fa-css-prefix}-github:before { content: $fa-var-github; }
+.#{$fa-css-prefix}-gitlab:before { content: $fa-var-gitlab; }
+.#{$fa-css-prefix}-heart-o:before { content: $fa-var-heart-o; }
+.#{$fa-css-prefix}-twitter:before { content: $fa-var-twitter; }

@@ -1,0 +1,15 @@
+/* antora.org */
+
+/* TEAM */
+Lead: Christophe Prud'homme
+Twitter: @prudhomm
+From: Stansbourg, FR
+
+/* SITE */
+Language: English
+Standards: HTML5, CSS3, JavaScript
+Components: Bulma, Font Awesome, Google Fonts, Google Analytics
+Software: Linux, Chrome, Firefox, Ruby, Middleman, Asciidoctor, Feelpp
+Source: https://github.com/feelpp/ibat.cemosis.fr
+/* Contact: hello [at] opendevise.com */
+/* Twitter: @cemosis */

@@ -1,0 +1,19 @@
+article.document {
+  padding: $section-padding-ends-small 0;
+
+  aside.nav {
+    float: right;
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    p {
+      line-height: 1;
+    }
+  }
+
+  .last-updated {
+    color: $grey;
+    font-style: italic;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+}

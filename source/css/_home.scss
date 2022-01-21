@@ -1,0 +1,171 @@
+.home-page {
+  .hero.is-primary {
+    .navbar-menu {
+      color: rgba($primary-invert, 0.7);
+    }
+
+    // NOTE when using 100vh on mobile, page jumps when browser autohides location bar
+    min-height: auto;
+    @include tablet {
+      min-height: 100vh;
+    }
+
+    .hero-body {
+      background: url(/img/lance-anderson-QdAAasrZhdk-unsplash.jpeg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      // use this if mobile font size is 87.5%
+      //padding-top: 6.5rem;
+      //padding-bottom: 9.5rem;
+      // use this if mobile font size is 93.75%
+      padding-top: 6rem;
+      padding-bottom: 10rem;
+      // use this if mobile font size is 100%
+      //padding-top: 4.75rem;
+      //padding-bottom: 7.25rem;
+      @include tablet {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .container {
+        @include tablet {
+          flex: 0 1 75%;
+        }
+      }
+    }
+
+    h1.title {
+      line-height: 1.25;
+      word-break: normal;
+      color:#ff6f00;
+      @include tablet {
+        font-size: 7rem;
+        text-align: center;
+        white-space: nowrap;
+      }
+    
+    }
+    .subtitle {
+        color:#ff6f00;
+      }
+
+    span.line {
+      display: block;
+      @include tablet {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 0.0625em 2.5rem 0.125em 2.5rem;
+        + span.line {
+          margin-top: 0.75rem;
+          position: relative;
+          left: -2.5rem;
+        }
+      }
+    }
+
+    p.subtitle {
+      font-family: $heading-family;
+      font-weight: $weight-light;
+      letter-spacing: -0.005em;
+      line-height: 1.4;
+      margin-top: 0;
+      @include tablet {
+        font-size: 2rem;
+        text-align: center;
+        padding: 0 0.5em;
+      }
+    }
+  }
+
+  .section {
+    h2.title {
+      text-transform: uppercase;
+      font-weight: $weight-light;
+      letter-spacing: -0.025em;
+      margin-bottom: 3.25rem;
+      padding-bottom: 0.75rem;
+      background: linear-gradient(to left, $white 0%, $black-ter 70%) no-repeat left bottom / 100% 0.15rem;
+    }
+
+    h3.title {
+      font-size: 1.75rem;
+      font-weight: $weight-bold;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    p.subtitle {
+      color: inherit;
+      font-size: 1.25rem;
+      font-weight: $weight-light;
+      letter-spacing: -0.015em;
+      line-height: inherit;
+    }
+  }
+
+  #feature {
+    @include touch {
+      .columns.is-desktop > .column {
+        width: auto;
+        margin-left: 0;
+      }
+    }
+
+    h2.title {
+      word-break: normal;
+      @include desktop {
+        text-transform: none;
+        text-align: left;
+        margin-bottom: 0;
+        background-position: bottom left;
+      }
+    }
+
+    h3.subtitle {
+      //color: $primary;
+      //color: inherit;
+      font-size: $size-4;
+      font-weight: $heading-weight;
+    }
+
+    p.desc, li {
+      font-size: 1.125rem;
+    }
+
+    ul {
+      margin-top: 1.5rem;
+    }
+
+    li {
+      padding-top: 0.5rem;
+      font-weight: $weight-medium;
+    }
+  }
+
+  .is-alternate {
+    background-color: $primary-gray;
+    h3.title, h3.subtitle, p.desc {
+      color: $white;
+    }
+  }
+
+  .image {
+    max-height: 100%;
+  }
+
+  li.tick {
+    display: flex;
+    &::before {
+      flex-shrink: 0;
+      color: rgb(30,136,229);
+      content: "\f00c";
+      font-family: FontAwesome;
+      display: inline-block;
+      //width: 2.25rem;
+      width: 2rem;
+      padding-left: 0.25rem;
+    }
+  }
+}

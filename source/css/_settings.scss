@@ -1,0 +1,89 @@
+@function rem-to-px($rems) {
+  @return ($rems * $body-size) / ($rems * 0 + 1);
+}
+
+$body-size: 16px;
+//$body-size-mobile: 0.875 * $body-size;
+$body-size-mobile: 0.9375 * $body-size;
+$family-primary: Montserrat, sans-serif;
+$family-monospace: 'Roboto Mono', monospace;
+// nice amber (org) ffa000
+// $primary: rgba(255, 160, 0, 1);
+// super-fury amber ff6f00
+$primary: rgba(255, 111, 0, 1);
+// fun-fury amber ffa040
+$primary-light: rgba(255, 160, 64, 1);
+// post-fury amber c43e00
+$primary-dark: rgba(196, 62, 0, 1);
+// mountain background gray 484848
+$primary-gray: rgba(72, 72, 72, 1);
+// OD pink b91d5e
+// $primary-bis: rgba(185, 27, 94, 1);
+// nice pink (org) ec407a
+$primary-bis: rgba(236, 64, 122, 1);
+// light blue (org?) 2196f3
+// $primary-ter: rgba(33, 150, 243, 1);
+// super-power purple 4a148c
+$primary-ter: rgba(74, 20, 140, 1);
+// super-power gray and screen frame gray 505050
+$primary-ter-gray: rgba(80, 80, 80, 1);
+// fun-power purple 7c43bd
+$primary-ter-light: rgba(124, 67, 189, 1);
+// fun-power gray 808080
+$primary-ter-light-gray: rgba(128, 128, 128, 1);
+// mega-power purple 12005e
+$primary-ter-dark: rgba(18, 0, 94, 1);
+// pure light gray d3
+$gray-light: rgba(211, 211, 211, 1);
+$text: $black-ter;
+
+$dark: $black-ter;
+$dark-invert: $white-ter;
+
+$link: $primary;
+
+$heading-family: Montserrat, sans-serif;
+$heading-weight: $weight-semibold;
+
+$title-color: $text;
+$title-family: $heading-family;
+$title-weight: $weight-semibold;
+
+$subtitle-family: $heading-family;
+
+$prose-family: Montserrat, sans-serif;
+//$prose-family: 'Noto Serif', serif;
+//$prose-color: rgba(0, 0, 0, 0.84);
+$prose-color: $text;
+
+$section-padding-ends: 3rem;
+$section-padding-sides: 1.25rem;
+$section-padding-ends-small: 1.5rem;
+$section-padding-ends-medium: 9rem;
+$section-padding-ends-large: 18rem;
+$section-padding: $section-padding-ends $section-padding-sides;
+$section-padding-small: $section-padding-ends-small $section-padding-sides;
+$section-padding-medium: $section-padding-ends-medium $section-padding-sides;
+$section-padding-large: $section-padding-ends-large $section-padding-sides;
+
+$gap: 20px;
+$column-gap: 0.75rem;
+$column-gap-px: rem-to-px($column-gap);
+
+$container-tablet: 769px;
+// 15px accounts for the width of the scrollbar
+$container-tablet-max: $container-tablet - (2 * rem-to-px($section-padding-sides)) - 15px;
+$container-desktop: 960px;
+$container-widescreen: 1152px;
+$container-fullhd: 1344px;
+
+$tablet: $container-tablet;
+$desktop: $container-desktop + (2 * $gap);
+$widescreen: $container-widescreen + (2 * $gap);
+$fullhd: $container-fullhd + (2 * $gap);
+
+@function colspan-width($container-width, $cols, $span) {
+  $inner-column-gap-px: 2 * $column-gap-px;
+  $column-width: ($container-width - $inner-column-gap-px * ($cols - 1)) / $cols;
+  @return $column-width * $span + ($span - 1) * $inner-column-gap-px;
+}

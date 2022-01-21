@@ -1,0 +1,17 @@
+@if $body-size-mobile != $body-size {
+  @include mobile {
+    html {
+      font-size: $body-size-mobile;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-family;
+  font-weight: $heading-weight;
+}

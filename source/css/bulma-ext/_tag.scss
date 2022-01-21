@@ -1,0 +1,24 @@
+.tags.is-condensed {
+  &:last-child {
+    margin-bottom: -0.3125rem;
+  }
+  .tag {
+    margin-bottom: 0.3125rem;
+    &:not(:last-child) {
+      margin-right: 0.3125rem;
+    }
+  }
+}
+
+.tag.has-icon::before {
+  display: inline-block;
+  font-family: FontAwesome;
+  content: "\f02b";
+  width: 1.3333em;
+}
+
+a.tag.is-light:hover {
+  text-decoration: none;
+  background-color: $primary;
+  color: $primary-invert;
+}
